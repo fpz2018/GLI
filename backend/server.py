@@ -129,17 +129,20 @@ def verify_jwt_token(token: str) -> dict:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
 
 async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    token = credentials.credentials
-    payload = verify_jwt_token(token)
-    user_email = payload.get("email")
-    if not user_email:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
-    
-    user_doc = await db.users.find_one({"email": user_email})
-    if not user_doc:
-        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
-    
-    return User(**user_doc)
+    try:
+        token = credentials.credentials
+        payload = verify_jwt_token(token)
+        user_email = payload.get("email")
+        if not user_email:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+        
+        user_doc = await db.users.find_one({"email": user_email})
+        if not user_doc:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="User not found")
+        
+        return User(**user_doc)
+    except Exception:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Authentication required")
 
 # Authentication routes
 @api_router.post("/auth/register")
