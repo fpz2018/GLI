@@ -54,6 +54,13 @@ const Navbar = () => {
               Coaches
             </Link>
             <Link 
+              to="/gli-groepen" 
+              className={`nav-link ${isActive('/gli-groepen') ? 'active' : ''}`}
+              data-testid="nav-gli-groepen"
+            >
+              GLI Groepen
+            </Link>
+            <Link 
               to="/faq" 
               className={`nav-link ${isActive('/faq') ? 'active' : ''}`}
               data-testid="nav-faq"
