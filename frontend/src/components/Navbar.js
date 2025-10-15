@@ -169,6 +169,9 @@ const Navbar = () => {
             <Link to="/gli-aanbieders" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               GLI Aanbieders
             </Link>
+            <Link to="/verwijzerstool" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              Verwijzerstool
+            </Link>
             <Link to="/faq" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               FAQ
             </Link>
