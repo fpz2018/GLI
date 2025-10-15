@@ -5,12 +5,13 @@ from enum import Enum
 
 class GLIType(str, Enum):
     BEWEEGKUUR = "Beweegkuur"
-    COOL = "COOL" 
+    COOL = "Cool" 
     SLIMMER = "Slimmer"
 
 class GroupStatus(str, Enum):
     PLANNING = "In planning"
     OPEN = "Inschrijving open"
+    BESCHIKBAAR = "Beschikbaar"
     VOL = "Vol"
     GESTART = "Gestart"
     AFGEROND = "Afgerond"
