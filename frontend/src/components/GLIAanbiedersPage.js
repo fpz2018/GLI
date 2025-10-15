@@ -214,7 +214,8 @@ const AanbiederCard = ({ aanbieder, index }) => {
     { bg: 'bg-emerald-50', border: 'border-emerald-200', accent: 'bg-emerald-600' },
     { bg: 'bg-blue-50', border: 'border-blue-200', accent: 'bg-blue-600' },
     { bg: 'bg-purple-50', border: 'border-purple-200', accent: 'bg-purple-600' },
-    { bg: 'bg-orange-50', border: 'border-orange-200', accent: 'bg-orange-600' }
+    { bg: 'bg-orange-50', border: 'border-orange-200', accent: 'bg-orange-600' },
+    { bg: 'bg-pink-50', border: 'border-pink-200', accent: 'bg-pink-600' }
   ];
   
   const color = colors[index % colors.length];
