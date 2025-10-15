@@ -194,6 +194,17 @@ async def update_groep(
             detail="Kan GLI groep niet updaten"
         )
 
+@router.get("/debug/raw")
+async def debug_raw_airtable_data(
+    service: AirtableService = Depends(get_airtable_service)
+):
+    """Debug endpoint om ruwe Airtable data te bekijken."""
+    try:
+        records = service.gli_table.all()
+        return {"raw_records": records}
+    except Exception as e:
+        return {"error": str(e)}
+
 @router.delete("/{groep_id}")
 async def delete_groep(
     groep_id: str,
