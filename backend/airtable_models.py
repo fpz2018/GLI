@@ -4,7 +4,7 @@ from datetime import date
 from enum import Enum
 
 class GLIType(str, Enum):
-    BEWEEGKUUR = "BeweegKuur"
+    BEWEEGKUUR = "Beweegkuur"
     COOL = "COOL" 
     SLIMMER = "SLIMMER"
 
