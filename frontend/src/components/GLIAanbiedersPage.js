@@ -217,8 +217,45 @@ const GLIAanbiedersPage = () => {
             ))}
           </div>
 
-          {/* Contact Info */}
-          <div className="mt-16 bg-emerald-50 rounded-xl p-8 text-center">
+          {/* Informatie over Aanbieder Types */}
+          <div className="mt-16 bg-gray-50 rounded-xl p-8">
+            <h3 className="text-xl font-semibold mb-6 text-center">Soorten GLI Aanbieders</h3>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white p-4 rounded-lg border border-emerald-200">
+                <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center mb-3">
+                  <span className="text-white font-bold text-sm">G</span>
+                </div>
+                <h4 className="font-semibold text-emerald-800 mb-2">Groepen Aanbieders</h4>
+                <p className="text-sm text-gray-700">
+                  Draaien zelfstandig GLI groepen voor deelnemers. Hebben eigen programma's en planning.
+                </p>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg border border-purple-200">
+                <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mb-3">
+                  <span className="text-white font-bold text-sm">T</span>
+                </div>
+                <h4 className="font-semibold text-purple-800 mb-2">Team Partners</h4>
+                <p className="text-sm text-gray-700">
+                  Onderdeel van BeweegKuur teams. Bieden specialistische ondersteuning zoals voedingsadvies.
+                </p>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg border border-blue-200">
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mb-3">
+                  <span className="text-white font-bold text-sm">I</span>
+                </div>
+                <h4 className="font-semibold text-blue-800 mb-2">Info Aanbieders</h4>
+                <p className="text-sm text-gray-700">
+                  Aanbieders ter informatie. Online platforms of aanbieders buiten Zeist regio.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Info voor Verwijzers */}
+          <div className="mt-8 bg-emerald-50 rounded-xl p-8 text-center">
             <h3 className="text-xl font-semibold mb-4" data-testid="contact-info-title">
               Wilt u ook GLI aanbieder worden?
             </h3>
