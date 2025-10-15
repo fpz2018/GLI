@@ -68,17 +68,17 @@ const GLIAanbiedersPage = () => {
     },
     {
       naam: "Diëtistenpraktijk Zeist",
-      specialisatie: "Voedingsadvies en leefstijlbegeleiding",
-      beschrijving: "Gespecialiseerde diëtistenpraktijk aan de Woudenbergseweg. Biedt voedingsadvies en begeleiding als onderdeel van GLI programma's.",
-      diensten: ["Voedingsadvies", "Dieettherapie", "Leefstijlbegeleiding", "Diabetes coaching"],
+      specialisatie: "Voedingsadvies als onderdeel van BeweegKuur teams",
+      beschrijving: "Gespecialiseerde diëtistenpraktijk die voedingsadvies biedt als onderdeel van BeweegKuur leefstijlteams. Draait geen zelfstandige groepen maar ondersteunt andere GLI aanbieders.",
+      diensten: ["Voedingsadvies (BeweegKuur)", "Dieettherapie", "Team ondersteuning", "Diabetes coaching"],
       contactInfo: {
         adres: "Woudenbergseweg 9, 3701 BA Zeist",
         telefoon: "030 692 5717",
         email: "info@dietistenpraktijkzeist.nl",
         website: "www.dietistenpraktijkzeist.nl"
       },
-      erkenningen: ["BIG geregistreerd diëtist", "GLI voedingsspecialist"],
-      groepen: statistics?.per_aanbieder["Diëtistenpraktijk Zeist"] || 0
+      erkenningen: ["BIG geregistreerd diëtist", "BeweegKuur team partner"],
+      groepen: "Teamlid" // Onderdeel van BeweegKuur teams
     },
     {
       naam: "Fysio Sport & Training Dijnselburg",
