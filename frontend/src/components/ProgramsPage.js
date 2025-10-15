@@ -228,6 +228,34 @@ const ProgramCard = ({ program, index, groepen = [] }) => {
           </div>
         </div>
 
+        {/* GLI Groepen Status */}
+        <div className={`${color.bg} ${color.border} border rounded-lg p-4 mb-4`}>
+          <h4 className="font-semibold mb-3 text-sm">Beschikbare Groepen</h4>
+          {groepen.length > 0 ? (
+            <div className="space-y-2">
+              {groepen.filter(g => g.status === 'Beschikbaar' || g.status === 'In planning').slice(0, 3).map((groep, idx) => (
+                <div key={idx} className="flex justify-between items-center text-sm">
+                  <span className="font-medium">Groep {groep.groepnummer}</span>
+                  <span className={`px-2 py-1 rounded-full text-xs ${
+                    groep.status === 'Beschikbaar' ? 'bg-green-100 text-green-800' : 
+                    groep.status === 'In planning' ? 'bg-blue-100 text-blue-800' : 
+                    'bg-red-100 text-red-800'
+                  }`}>
+                    {groep.status}
+                  </span>
+                </div>
+              ))}
+              {groepen.length > 3 && (
+                <p className="text-xs text-gray-600 mt-2">
+                  +{groepen.length - 3} meer beschikbaar
+                </p>
+              )}
+            </div>
+          ) : (
+            <p className="text-sm text-gray-600">Geen actieve groepen momenteel</p>
+          )}
+        </div>
+
         <div className={`${color.bg} ${color.border} border rounded-lg p-4 mb-4`}>
           <div className="flex items-center">
             <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
