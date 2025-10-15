@@ -81,9 +81,51 @@ const GLIAanbiedersPage = () => {
       groepen: statistics?.per_aanbieder["Diëtistenpraktijk Zeist"] || 0
     },
     {
+      naam: "Fysio Sport & Training Dijnselburg",
+      specialisatie: "BeweegKuur en sportrevalidatie",
+      beschrijving: "Fysiotherapie praktijk gespecialiseerd in sport en training. Onderdeel van BeweegKuur teams met focus op bewegingstherapie en sportrevalidatie.",
+      diensten: ["BeweegKuur", "Fysiotherapie", "Sportrevalidatie", "Bewegingstherapie"],
+      contactInfo: {
+        adres: "Badmeester Schenkpad 14, 3705 GK Zeist",
+        telefoon: "030 699 0093",
+        email: "zeist@fysiosportentraining.nl",
+        website: "www.fysiosportentraining.nl"
+      },
+      erkenningen: ["BeweegKuur aanbieder", "KNGF geregistreerd"],
+      groepen: statistics?.per_aanbieder["Fysio Sport & Training Dijnselburg"] || 0
+    },
+    {
+      naam: "RondOm Leefstijl",
+      specialisatie: "COOL leefstijlcoaching",
+      beschrijving: "Gespecialiseerde leefstijlpraktijk met focus op gedragsverandering en leefstijlcoaching. Biedt COOL programma's voor duurzame leefstijlverandering.",
+      diensten: ["COOL programma", "Leefstijlcoaching", "Gedragsverandering", "Motivational coaching"],
+      contactInfo: {
+        adres: "Hoog Kanje 186E, 3708 DL Zeist",
+        telefoon: "088 118 0523",
+        email: "fleur.schouten@rondomleefstijl.nl",
+        website: "www.rondomleefstijl.nl"
+      },
+      erkenningen: ["COOL gecertificeerd", "Leefstijl specialisten"],
+      groepen: statistics?.per_aanbieder["Rondom Leefstijl"] || 0
+    },
+    {
+      naam: "Coach Marlies Hensen",
+      specialisatie: "Individuele leefstijlcoaching",
+      beschrijving: "Persoonlijke leefstijlcoach voor individuele begeleiding bij gedragsverandering. Ondersteunt bij verschillende GLI programma's.",
+      diensten: ["Individuele coaching", "Gedragstraining", "Leefstijladvies", "Motivatietraining"],
+      contactInfo: {
+        adres: "Zeist (locatie op afspraak)",
+        telefoon: "06 1735 4085",
+        email: "info@coachmarlies.nl",
+        website: "www.coachmarlies.nl"
+      },
+      erkenningen: ["Gecertificeerde leefstijlcoach", "Individuele coaching specialist"],
+      groepen: 0  // Individuele coaching, geen groepen
+    },
+    {
       naam: "Miguide (Cool-Miguide)",
       specialisatie: "Online GLI begeleiding",
-      beschrijving: "Digitale platform voor online GLI begeleiding vanuit Rotterdam. Biedt Cool-programma voor inwoners van Zeist via digitale coaching.",
+      beschrijving: "Digitaal platform voor online GLI begeleiding vanuit Rotterdam. Biedt Cool-programma voor inwoners van Zeist via digitale coaching. Informatie aanbieder.",
       diensten: ["COOL online programma", "Digitale coaching", "App-based begeleiding", "E-health"],
       contactInfo: {
         adres: "Parklaan 8, 3016 BB Rotterdam",
@@ -92,7 +134,7 @@ const GLIAanbiedersPage = () => {
         website: "www.miguide.nl"
       },
       erkenningen: ["COOL gecertificeerd", "E-health provider"],
-      groepen: statistics?.per_aanbieder["Miguide"] || statistics?.per_aanbieder["Rondom Leefstijl"] || 0
+      groepen: "Info" // Onbekend aantal groepen
     }
   ];
 
