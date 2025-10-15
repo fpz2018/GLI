@@ -46,7 +46,7 @@ class AirtableService:
             gli_aanbieder=fields.get("GLI aanbieder", ""),
             type_gli=fields.get("Type GLI", "Beweegkuur"),
             startdatum_groep=startdatum,
-            einddatum_groep=einddatum,
+            einddatum_groep=einddatum,  # Can be None
             groepnummer=str(fields.get("Groepnummer", "")),  # Convert to string
             status=fields.get("Status", "In planning"),
             created_time=record.get("createdTime", "")
