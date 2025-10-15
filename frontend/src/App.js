@@ -10,7 +10,6 @@ import LoginPage from './components/LoginPage';
 import RegisterPage from './components/RegisterPage';
 import DashboardPage from './components/DashboardPage';
 import ProgramsPage from './components/ProgramsPage';
-import CoachesPage from './components/CoachesPage';
 import ContactPage from './components/ContactPage';
 import FAQPage from './components/FAQPage';
 import GLIGroepenPage from './components/GLIGroepenPage';
