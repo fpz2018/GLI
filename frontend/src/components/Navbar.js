@@ -149,6 +149,9 @@ const Navbar = () => {
             <Link to="/coaches" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Coaches
             </Link>
+            <Link to="/gli-groepen" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              GLI Groepen
+            </Link>
             <Link to="/faq" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               FAQ
             </Link>
