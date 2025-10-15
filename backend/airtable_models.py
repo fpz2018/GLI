@@ -6,7 +6,7 @@ from enum import Enum
 class GLIType(str, Enum):
     BEWEEGKUUR = "Beweegkuur"
     COOL = "COOL" 
-    SLIMMER = "SLIMMER"
+    SLIMMER = "Slimmer"
 
 class GroupStatus(str, Enum):
     PLANNING = "In planning"
