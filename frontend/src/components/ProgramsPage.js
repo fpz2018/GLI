@@ -75,7 +75,12 @@ const ProgramsPage = () => {
           {programs.length > 0 ? (
             <div className="grid lg:grid-cols-3 gap-8">
               {programs.map((program, index) => (
-                <ProgramCard key={program.id} program={program} index={index} />
+                <ProgramCard 
+                  key={program.id} 
+                  program={program} 
+                  index={index}
+                  groepen={getGroepenForProgram(program.name)}
+                />
               ))}
             </div>
           ) : (
