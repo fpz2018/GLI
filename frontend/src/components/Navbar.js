@@ -153,9 +153,6 @@ const Navbar = () => {
             <Link to="/programs" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               Programma's
             </Link>
-            <Link to="/coaches" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
-              Coaches
-            </Link>
             <Link to="/gli-groepen" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               GLI Groepen
             </Link>
