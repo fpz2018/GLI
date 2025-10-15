@@ -204,10 +204,30 @@ const VerwijzersToolPage = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6" data-testid="verwijzers-title">
               GLI Verwijzerstool
             </h1>
-            <p className="text-xl max-w-3xl mx-auto">
+            <p className="text-xl max-w-3xl mx-auto mb-8">
               Hulpmiddel voor huisartsen en verwijzers om patiënten naar het juiste 
               GLI programma te verwijzen. Inclusiecriteria, triagetool en doorverwijsinstructies.
             </p>
+            
+            {/* Dikke Disclaimer */}
+            <div className="bg-yellow-100 border-2 border-yellow-300 rounded-xl p-6 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center mb-3">
+                <svg className="w-8 h-8 text-yellow-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+                <h3 className="text-2xl font-bold text-yellow-800">⚕️ ALLEEN VOOR ZORGVERLENERS</h3>
+              </div>
+              <div className="text-yellow-800 text-lg space-y-2">
+                <p className="font-semibold">
+                  Deze tool is uitsluitend bedoeld voor huisartsen, praktijkondersteuners en andere zorgverleners
+                </p>
+                <p className="text-base">
+                  • Gebruik deze tool alleen voor professionele medische besluitvorming<br/>
+                  • Niet bedoeld voor patiënten of algemene informatiedoeleinden<br/>
+                  • Altijd eigen medische expertise gebruiken bij verwijsbeslissingen
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
