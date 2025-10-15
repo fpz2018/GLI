@@ -80,6 +80,7 @@ const ProgramsPage = () => {
                     key={program.id} 
                     program={program} 
                     index={index}
+                    groepen={getGroepenForProgram(program.name)}
                   />
                 ))}
               </div>
