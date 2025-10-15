@@ -192,7 +192,7 @@ const ProgramsPage = () => {
   );
 };
 
-const ProgramCard = ({ program, index }) => {
+const ProgramCard = ({ program, index, groepen }) => {
   const colors = [
     { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-800', accent: 'bg-emerald-600' },
     { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', accent: 'bg-blue-600' },
