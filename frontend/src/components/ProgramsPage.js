@@ -6,10 +6,12 @@ const API = `${BACKEND_URL}/api`;
 
 const ProgramsPage = () => {
   const [programs, setPrograms] = useState([]);
+  const [gliGroepen, setGliGroepen] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchPrograms();
+    fetchGliGroepen();
   }, []);
 
   const fetchPrograms = async () => {
@@ -20,6 +22,26 @@ const ProgramsPage = () => {
       console.error('Error fetching programs:', error);
     }
     setLoading(false);
+  };
+
+  const fetchGliGroepen = async () => {
+    try {
+      const response = await axios.get(`${API}/gli-groepen/`);
+      setGliGroepen(response.data);
+    } catch (error) {
+      console.error('Error fetching GLI groepen:', error);
+    }
+  };
+
+  const getGroepenForProgram = (programName) => {
+    const typeMapping = {
+      'BeweegKuur': 'Beweegkuur',
+      'COOL': 'Cool',
+      'SLIMMER': 'Slimmer'
+    };
+    
+    const mappedType = typeMapping[programName];
+    return gliGroepen.filter(groep => groep.type_gli === mappedType);
   };
 
   if (loading) {
