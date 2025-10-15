@@ -142,7 +142,6 @@ function App() {
               <Route path="/login" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/programs" element={<ProgramsPage />} />
-              <Route path="/coaches" element={<CoachesPage />} />
               <Route path="/gli-groepen" element={<GLIGroepenPage />} />
               <Route path="/gli-aanbieders" element={<GLIAanbiedersPage />} />
               <Route path="/verwijzerstool" element={<VerwijzersToolPage />} />
