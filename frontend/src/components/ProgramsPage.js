@@ -245,6 +245,28 @@ const ProgramCard = ({ program, index, groepen }) => {
           </div>
         </div>
 
+        {groepen && groepen.length > 0 && (
+          <div className="mb-6">
+            <h4 className="font-semibold mb-2">Beschikbare groepen:</h4>
+            <div className="space-y-2">
+              {groepen.slice(0, 3).map((groep, idx) => (
+                <div key={idx} className="text-sm text-gray-600 flex items-center">
+                  <svg className="w-4 h-4 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>{groep.dag} {groep.tijd}</span>
+                  {groep.locatie && <span className="ml-2 text-gray-500">• {groep.locatie}</span>}
+                </div>
+              ))}
+              {groepen.length > 3 && (
+                <div className="text-xs text-gray-500">
+                  +{groepen.length - 3} meer beschikbaar
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
         <div className={`${color.bg} ${color.border} border rounded-lg p-4 mb-4`}>
           <div className="flex items-center">
             <svg className="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
