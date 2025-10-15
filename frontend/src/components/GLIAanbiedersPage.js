@@ -309,7 +309,15 @@ const AanbiederCard = ({ aanbieder, index }) => {
         <div className="mb-4 p-3 bg-white rounded-lg border border-gray-200">
           <div className="flex justify-between items-center">
             <span className="text-sm font-medium">Actieve groepen:</span>
-            <span className="text-lg font-bold text-emerald-600">{aanbieder.groepen}</span>
+            <span className={`text-lg font-bold ${
+              aanbieder.groepen === "Info" ? "text-blue-600" :
+              aanbieder.groepen === "Teamlid" ? "text-purple-600" :
+              "text-emerald-600"
+            }`}>
+              {aanbieder.groepen === "Info" ? "Info alleen" :
+               aanbieder.groepen === "Teamlid" ? "Team partner" :
+               aanbieder.groepen}
+            </span>
           </div>
         </div>
 
