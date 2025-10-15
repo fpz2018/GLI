@@ -155,7 +155,10 @@ const GLIAanbiedersPage = () => {
             
             <div className="text-center p-6 bg-orange-50 rounded-xl" data-testid="stat-cool">
               <div className="text-3xl font-bold text-orange-600 mb-2">
-                {gliAanbieders.filter(a => a.diensten.includes('COOL programma')).length}
+                {gliAanbieders.filter(a => 
+                  a.diensten.some(d => d.toLowerCase().includes('cool')) ||
+                  a.naam.toLowerCase().includes('cool')
+                ).length}
               </div>
               <div className="text-orange-700 font-medium">COOL Aanbieders</div>
             </div>
