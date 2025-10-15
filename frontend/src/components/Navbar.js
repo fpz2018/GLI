@@ -159,6 +159,9 @@ const Navbar = () => {
             <Link to="/gli-groepen" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               GLI Groepen
             </Link>
+            <Link to="/gli-aanbieders" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
+              GLI Aanbieders
+            </Link>
             <Link to="/faq" className="block nav-link" onClick={() => setIsMenuOpen(false)}>
               FAQ
             </Link>
