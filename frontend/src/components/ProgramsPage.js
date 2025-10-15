@@ -84,91 +84,19 @@ const ProgramsPage = () => {
                 ))}
               </div>
 
-              {/* Beschikbare Groepen Sectie */}
-              <div className="mt-16 bg-white rounded-xl shadow-sm p-8">
-                <h2 className="text-2xl font-bold text-center mb-8" data-testid="beschikbare-groepen-title">
-                  Beschikbare GLI Groepen
-                </h2>
-                <p className="text-center text-gray-600 mb-8">
-                  Live overzicht van beschikbare groepen per programma type uit onze database.
+              {/* Beschikbare Groepen Link */}
+              <div className="mt-12 text-center">
+                <h2 className="text-2xl font-bold mb-4">Beschikbare GLI Groepen</h2>
+                <p className="text-gray-600 mb-6">
+                  Bekijk live beschikbaarheid en planning van alle GLI groepen in Zeist
                 </p>
-
-                {programs.map((program, index) => {
-                  const groepen = getGroepenForProgram(program.name);
-                  const colors = [
-                    { bg: 'bg-emerald-50', border: 'border-emerald-200', text: 'text-emerald-800' },
-                    { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800' },
-                    { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-800' }
-                  ];
-                  const color = colors[index % colors.length];
-
-                  return (
-                    <div key={program.id} className={`mb-8 ${color.bg} ${color.border} border rounded-xl p-6`}>
-                      <h3 className="text-xl font-bold mb-4 flex items-center">
-                        <span className={`w-8 h-8 ${color.text.replace('text-', 'bg-').replace('-800', '-600')} rounded-lg flex items-center justify-center mr-3`}>
-                          <span className="text-white font-bold text-sm">{program.name[0]}</span>
-                        </span>
-                        {program.name} Groepen
-                      </h3>
-                      
-                      {groepen.length > 0 ? (
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {groepen.map((groep, idx) => (
-                            <div key={idx} className="bg-white p-4 rounded-lg border border-gray-200">
-                              <div className="flex justify-between items-start mb-2">
-                                <h4 className="font-semibold text-sm">Groep {groep.groepnummer}</h4>
-                                <span className={`px-2 py-1 rounded-full text-xs ${
-                                  groep.status === 'Beschikbaar' ? 'bg-green-100 text-green-800' : 
-                                  groep.status === 'In planning' ? 'bg-blue-100 text-blue-800' : 
-                                  groep.status === 'Vol' ? 'bg-red-100 text-red-800' :
-                                  'bg-gray-100 text-gray-800'
-                                }`}>
-                                  {groep.status}
-                                </span>
-                              </div>
-                              
-                              <p className="text-sm font-medium text-gray-700 mb-2">
-                                📍 {groep.gli_aanbieder}
-                              </p>
-                              
-                              <div className="text-xs text-gray-600 space-y-1">
-                                <div>
-                                  <span className="font-medium">Start:</span> {new Date(groep.startdatum_groep).toLocaleDateString('nl-NL')}
-                                </div>
-                                {groep.einddatum_groep && (
-                                  <div>
-                                    <span className="font-medium">Eind:</span> {new Date(groep.einddatum_groep).toLocaleDateString('nl-NL')}
-                                  </div>
-                                )}
-                              </div>
-                              
-                              {groep.status === 'Beschikbaar' && (
-                                <button className="mt-3 w-full btn btn-primary text-xs">
-                                  Meer informatie
-                                </button>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="text-center py-8 text-gray-500">
-                          <p>Momenteel geen actieve groepen voor {program.name}</p>
-                          <p className="text-sm mt-1">Neem contact op voor meer informatie over komende groepen</p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-
-                <div className="text-center mt-8">
-                  <a 
-                    href="/gli-groepen" 
-                    className="btn btn-primary"
-                    data-testid="view-all-groups-btn"
-                  >
-                    Bekijk alle groepen
-                  </a>
-                </div>
+                <a 
+                  href="/gli-groepen" 
+                  className="btn btn-primary"
+                  data-testid="view-all-groups-btn"
+                >
+                  Bekijk alle groepen en planning
+                </a>
               </div>
             </>
           ) : (
