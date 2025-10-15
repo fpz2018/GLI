@@ -330,6 +330,7 @@ async def seed_data():
 
 # Include the router in the main app
 app.include_router(api_router)
+app.include_router(gli_router)
 
 app.add_middleware(
     CORSMiddleware,
