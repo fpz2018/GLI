@@ -22,63 +22,77 @@ const GLIAanbiedersPage = () => {
     setLoading(false);
   };
 
-  // GLI aanbieders informatie gebaseerd op Zorg4Zeist en Airtable data
+  // GLI aanbieders informatie gebaseerd op echte Zorg4Zeist data en Airtable
   const gliAanbieders = [
     {
-      naam: "Fysio Sport & Training Dijnselburg",
-      specialisatie: "BeweegKuur programma's",
-      beschrijving: "Fysiotherapiepraktijk gespecialiseerd in sportrevalidatie en leefstijlinterventies. Biedt intensieve medische begeleiding voor BeweegKuur programma's.",
-      diensten: ["BeweegKuur", "Fysiotherapie", "Sportrevalidatie", "Leefstijlcoaching"],
+      naam: "Fysiopraktijk Zeist",
+      specialisatie: "BeweegKuur en algemene fysiotherapie",
+      beschrijving: "Moderne fysiotherapiepraktijk aan de Laan van Vollenhove. Biedt zowel reguliere fysiotherapie als GLI programma's met persoonlijke begeleiding.",
+      diensten: ["BeweegKuur", "Manuele therapie", "Fysiotherapie", "Preventieve zorg"],
       contactInfo: {
-        adres: "Dijnselburg, Zeist",
-        telefoon: "+31 30 123 4567",
-        email: "info@fysiosport-dijnselburg.nl",
-        website: "www.fysiosport-dijnselburg.nl"
+        adres: "Laan van Vollenhove 20B, 3706 AA Zeist",
+        telefoon: "030 721 0771",
+        email: "administratie@fysiopraktijkzeist.nl",
+        website: "www.fysiopraktijkzeist.nl"
       },
-      erkenningen: ["Erkende BeweegKuur aanbieder", "KNGF geregistreerd"],
-      groepen: statistics?.per_aanbieder["Fysio Sport & Training Dijnselburg"] || 0
+      erkenningen: ["GLI gecertificeerd", "KNGF geregistreerd"],
+      groepen: statistics?.per_aanbieder["Fysiopraktijk Zeist"] || 0
     },
     {
       naam: "van Tongeren Fysiotherapeuten",
       specialisatie: "SLIMMER diabetes preventie",
-      beschrijving: "Ervaren fysiotherapeuten met specialisatie in diabetes preventie en metabole gezondheid. Gecertificeerd voor SLIMMER programma's.",
+      beschrijving: "Ervaren fysiotherapeuten aan de Utrechtseweg met specialisatie in diabetes preventie en metabole gezondheid. Gecertificeerd voor SLIMMER programma's.",
       diensten: ["SLIMMER programma", "Diabetes preventie", "Fysiotherapie", "Voedingsadvies"],
       contactInfo: {
-        adres: "Zeist Centrum",
-        telefoon: "+31 30 234 5678",
-        email: "info@vantongeren-fysio.nl",
-        website: "www.vantongeren-fysio.nl"
+        adres: "Utrechtseweg 88, 3702 AD Zeist",
+        telefoon: "030 691 8945",
+        email: "info@vantongerenfysiotherapeuten.nl",
+        website: "www.vantongerenfysiotherapeuten.nl"
       },
       erkenningen: ["SLIMMER gecertificeerd", "Diabetes preventie specialist"],
       groepen: statistics?.per_aanbieder["van Tongeren Fysiotherapeuten"] || 0
     },
     {
-      naam: "Fysiopraktijk Zeist",
-      specialisatie: "BeweegKuur en algemene fysiotherapie",
-      beschrijving: "Moderne fysiotherapiepraktijk in het hart van Zeist. Biedt zowel reguliere fysiotherapie als GLI programma's met persoonlijke begeleiding.",
-      diensten: ["BeweegKuur", "Manuele therapie", "Fysiotherapie", "Preventieve zorg"],
+      naam: "Widar Fysiotherapie",
+      specialisatie: "BeweegKuur binnen gezondheidscentrum",
+      beschrijving: "Onderdeel van het WIDAR Gezondheidscentrum aan de Laan van Beek en Royen. Multidisciplinaire aanpak voor GLI programma's.",
+      diensten: ["BeweegKuur", "Fysiotherapie", "Multidisciplinaire zorg", "Revalidatie"],
       contactInfo: {
-        adres: "Hoofdstraat 123, Zeist",
-        telefoon: "+31 30 345 6789",
-        email: "info@fysiopraktijk-zeist.nl",
-        website: "www.fysiopraktijk-zeist.nl"
+        adres: "Laan van Beek en Royen 39, 3701 AK Zeist",
+        telefoon: "030 693 2846",
+        email: "ine.hofman@widar.nl",
+        website: "www.widar.nl"
       },
-      erkenningen: ["GLI gecertificeerd", "Multidisciplinaire aanpak"],
-      groepen: statistics?.per_aanbieder["Fysiopraktijk Zeist"] || 0
+      erkenningen: ["WIDAR Gezondheidscentrum", "GLI gecertificeerd"],
+      groepen: statistics?.per_aanbieder["Widar Fysiotherapie"] || 0
     },
     {
-      naam: "Rondom Leefstijl",
-      specialisatie: "COOL coaching programma's",
-      beschrijving: "Gespecialiseerde leefstijlcoaching praktijk met focus op gedragsverandering en mindset coaching. Expert in COOL programma methodiek.",
-      diensten: ["COOL programma", "Leefstijlcoaching", "Mindset coaching", "Gedragsverandering"],
+      naam: "Diëtistenpraktijk Zeist",
+      specialisatie: "Voedingsadvies en leefstijlbegeleiding",
+      beschrijving: "Gespecialiseerde diëtistenpraktijk aan de Woudenbergseweg. Biedt voedingsadvies en begeleiding als onderdeel van GLI programma's.",
+      diensten: ["Voedingsadvies", "Dieettherapie", "Leefstijlbegeleiding", "Diabetes coaching"],
       contactInfo: {
-        adres: "Zeist West",
-        telefoon: "+31 30 456 7890",
-        email: "info@rondomleefstijl.nl",
-        website: "www.rondomleefstijl.nl"
+        adres: "Woudenbergseweg 9, 3701 BA Zeist",
+        telefoon: "030 692 5717",
+        email: "info@dietistenpraktijkzeist.nl",
+        website: "www.dietistenpraktijkzeist.nl"
       },
-      erkenningen: ["COOL gecertificeerde coaches", "Leefstijl specialisten"],
-      groepen: statistics?.per_aanbieder["Rondom Leefstijl"] || 0
+      erkenningen: ["BIG geregistreerd diëtist", "GLI voedingsspecialist"],
+      groepen: statistics?.per_aanbieder["Diëtistenpraktijk Zeist"] || 0
+    },
+    {
+      naam: "Miguide (Cool-Miguide)",
+      specialisatie: "Online GLI begeleiding",
+      beschrijving: "Digitale platform voor online GLI begeleiding vanuit Rotterdam. Biedt Cool-programma voor inwoners van Zeist via digitale coaching.",
+      diensten: ["COOL online programma", "Digitale coaching", "App-based begeleiding", "E-health"],
+      contactInfo: {
+        adres: "Parklaan 8, 3016 BB Rotterdam",
+        telefoon: "085 006 6872",
+        email: "info@miguide.nl",
+        website: "www.miguide.nl"
+      },
+      erkenningen: ["COOL gecertificeerd", "E-health provider"],
+      groepen: statistics?.per_aanbieder["Miguide"] || statistics?.per_aanbieder["Rondom Leefstijl"] || 0
     }
   ];
 
