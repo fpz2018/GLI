@@ -13,6 +13,9 @@ from datetime import datetime, timezone
 import bcrypt
 import jwt
 from enum import Enum
+import sys
+sys.path.append('/app/backend')
+from gli_router import router as gli_router
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
