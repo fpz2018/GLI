@@ -22,7 +22,7 @@ class GLIGroepBase(BaseModel):
     gli_aanbieder: str = Field(..., description="Naam van de GLI aanbieder")
     type_gli: GLIType = Field(..., description="Type GLI programma")
     startdatum_groep: date = Field(..., description="Startdatum van de groep")
-    einddatum_groep: date = Field(..., description="Einddatum van de groep")
+    einddatum_groep: Optional[date] = Field(None, description="Einddatum van de groep")
     groepnummer: str = Field(..., description="Uniek groepsnummer")
     status: GroupStatus = Field(..., description="Status van de groep")
 
