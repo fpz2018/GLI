@@ -346,11 +346,28 @@ const VerwijzersToolPage = () => {
 
           {currentStep === 'triage' && (
             <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4">GLI Triagetool</h2>
                 <p className="text-lg text-gray-600">
                   Beantwoord de vragen over uw patiënt om een gepersonaliseerde programma-aanbeveling te krijgen.
                 </p>
+              </div>
+
+              {/* Extra Disclaimer voor Triagetool */}
+              <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4 mb-8">
+                <div className="flex items-start">
+                  <svg className="w-6 h-6 text-red-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <div>
+                    <h3 className="font-bold text-red-800 mb-2">⚕️ Professionele Verantwoordelijkheid</h3>
+                    <p className="text-red-700 text-sm">
+                      <strong>Deze tool geeft alleen een indicatie.</strong> Als zorgverlener blijft u volledig verantwoordelijk 
+                      voor de medische beoordeling en verwijsbeslissing. Gebruik altijd uw eigen professionele expertise 
+                      en houd rekening met de individuele situatie van de patiënt.
+                    </p>
+                  </div>
+                </div>
               </div>
 
               {!recommendation ? (
