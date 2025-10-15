@@ -157,12 +157,17 @@ const HomePage = () => {
                 Huisarts of zorgverlener? Leer hoe u patiënten kunt doorverwijzen naar GLI.
               </p>
               {user && (user.role === 'verwijzer' || user.role === 'admin') ? (
-                <Link to="/dashboard" className="btn btn-outline text-sm w-full">
-                  Naar Dashboard
-                </Link>
+                <div className="space-y-2">
+                  <Link to="/dashboard" className="btn btn-outline text-sm w-full">
+                    Naar Dashboard
+                  </Link>
+                  <Link to="/verwijzerstool" className="btn btn-primary text-sm w-full">
+                    Verwijzerstool
+                  </Link>
+                </div>
               ) : (
-                <Link to="/contact" className="btn btn-outline text-sm w-full">
-                  Contact opnemen
+                <Link to="/verwijzerstool" className="btn btn-outline text-sm w-full">
+                  Verwijzerstool
                 </Link>
               )}
             </div>
