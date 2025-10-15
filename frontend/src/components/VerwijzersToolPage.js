@@ -272,10 +272,17 @@ const VerwijzersToolPage = () => {
             <div className="space-y-12">
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold mb-4">Inclusiecriteria GLI Programma's</h2>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-6">
                   Overzicht van de inclusie- en exclusiecriteria per GLI programma. 
                   Controleer eerst of uw patiënt geschikt is voordat u de triagetool gebruikt.
                 </p>
+                
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-2xl mx-auto">
+                  <p className="text-blue-800 text-sm">
+                    <strong>🩺 Voor zorgverleners:</strong> Deze criteria zijn richtlijnen. 
+                    Gebruik uw medische expertise bij twijfelgevallen en overleg indien nodig met GLI coördinatoren.
+                  </p>
+                </div>
               </div>
 
               <div className="grid lg:grid-cols-3 gap-8">
